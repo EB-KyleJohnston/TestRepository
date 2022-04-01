@@ -1,0 +1,194 @@
+{
+  "name": "CRM -> Kafka (AssignmentUpdate)",
+  "schema": [
+    {
+      "control_type": "text",
+      "label": "Assignment number",
+      "type": "string",
+      "name": "assignmentNumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Assignment ID",
+      "type": "string",
+      "name": "assignmentId"
+    },
+    {
+      "control_type": "text",
+      "label": "Employee number",
+      "type": "string",
+      "name": "employeeNumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Job order number",
+      "type": "string",
+      "name": "jobOrderNumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Job order ID",
+      "type": "string",
+      "name": "jobOrderId"
+    },
+    {
+      "control_type": "text",
+      "label": "Shift",
+      "type": "string",
+      "name": "shift"
+    },
+    {
+      "control_type": "text",
+      "label": "Company number",
+      "type": "string",
+      "name": "companyNumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Company name",
+      "type": "string",
+      "name": "companyName"
+    },
+    {
+      "control_type": "text",
+      "label": "Job title",
+      "type": "string",
+      "name": "jobTitle"
+    },
+    {
+      "control_type": "text",
+      "label": "Contact name",
+      "type": "string",
+      "name": "contactName"
+    },
+    {
+      "control_type": "text",
+      "label": "Contact email",
+      "type": "string",
+      "name": "contactEmail"
+    },
+    {
+      "control_type": "text",
+      "label": "Contact business phone",
+      "type": "string",
+      "name": "contactBusinessPhone"
+    },
+    {
+      "control_type": "text",
+      "label": "Contact home phone",
+      "type": "string",
+      "name": "contactHomePhone"
+    },
+    {
+      "control_type": "text",
+      "label": "Contact mobile phone",
+      "type": "string",
+      "name": "contactMobilePhone"
+    },
+    {
+      "control_type": "text",
+      "label": "Contact direct phone",
+      "type": "string",
+      "name": "contactDirectPhone"
+    },
+    {
+      "control_type": "text",
+      "label": "Pssm name",
+      "type": "string",
+      "name": "pssmName"
+    },
+    {
+      "control_type": "text",
+      "label": "Start date",
+      "type": "string",
+      "name": "startDate"
+    },
+    {
+      "control_type": "text",
+      "label": "Estimated end date",
+      "type": "string",
+      "name": "estimatedEndDate"
+    },
+    {
+      "control_type": "text",
+      "label": "Actual end date",
+      "type": "string",
+      "name": "actualEndDate"
+    },
+    {
+      "control_type": "text",
+      "label": "Start time",
+      "type": "string",
+      "name": "startTime"
+    },
+    {
+      "control_type": "text",
+      "label": "End time",
+      "type": "string",
+      "name": "endTime"
+    },
+    {
+      "control_type": "text",
+      "label": "Is active",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Is active",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "isActive"
+      },
+      "type": "boolean",
+      "name": "isActive"
+    },
+    {
+      "name": "payrates",
+      "type": "array",
+      "of": "object",
+      "label": "Payrates",
+      "properties": [
+        {
+          "control_type": "text",
+          "label": "Pay type",
+          "type": "string",
+          "name": "payType"
+        },
+        {
+          "control_type": "text",
+          "label": "Pay code",
+          "type": "string",
+          "name": "payCode"
+        },
+        {
+          "control_type": "number",
+          "label": "Pay rate",
+          "parse_output": "float_conversion",
+          "type": "number",
+          "name": "payRate"
+        },
+        {
+          "control_type": "text",
+          "label": "Is regular",
+          "render_input": {
+          },
+          "parse_output": {
+          },
+          "toggle_hint": "Select from option list",
+          "toggle_field": {
+            "label": "Is regular",
+            "control_type": "text",
+            "toggle_hint": "Use custom value",
+            "type": "boolean",
+            "name": "isRegular"
+          },
+          "type": "boolean",
+          "name": "isRegular"
+        }
+      ]
+    }
+  ]
+}

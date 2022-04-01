@@ -1,0 +1,23 @@
+{
+  "name": "CRM t-> Kafka (Assosiate Sensitive Update)",
+  "schema": [
+    {
+      "control_type": "text",
+      "label": "Employeenumber",
+      "type": "string",
+      "name": "employeenumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Ssn",
+      "type": "string",
+      "name": "ssn"
+    },
+    {
+      "control_type": "text",
+      "label": "Dob",
+      "type": "string",
+      "name": "dob"
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "name": "CRM -> Kafka (Associate Profile)",
+  "schema": [
+    {
+      "control_type": "text",
+      "label": "Employeenumber",
+      "type": "string",
+      "name": "employeenumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Firstname",
+      "type": "string",
+      "name": "firstname"
+    },
+    {
+      "control_type": "text",
+      "label": "Lastname",
+      "type": "string",
+      "name": "lastname"
+    },
+    {
+      "control_type": "text",
+      "label": "Phonenumber",
+      "type": "string",
+      "name": "phonenumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Emailaddress",
+      "type": "string",
+      "name": "emailaddress"
+    },
+    {
+      "control_type": "text",
+      "label": "Addresshome line 1",
+      "type": "string",
+      "name": "addresshome_line1"
+    },
+    {
+      "control_type": "text",
+      "label": "Addresshome line 2",
+      "type": "string",
+      "name": "addresshome_line2"
+    },
+    {
+      "control_type": "text",
+      "label": "Addresshome city",
+      "type": "string",
+      "name": "addresshome_city"
+    },
+    {
+      "control_type": "text",
+      "label": "Addresshome county",
+      "type": "string",
+      "name": "addresshome_county"
+    },
+    {
+      "control_type": "text",
+      "label": "Addresshome state",
+      "type": "string",
+      "name": "addresshome_state"
+    },
+    {
+      "control_type": "text",
+      "label": "Addresshome postalcode",
+      "type": "string",
+      "name": "addresshome_postalcode"
+    },
+    {
+      "control_type": "text",
+      "label": "Addresshome country",
+      "type": "string",
+      "name": "addresshome_country"
+    },
+    {
+      "control_type": "text",
+      "label": "Addressmail line 1",
+      "type": "string",
+      "name": "addressmail_line1"
+    },
+    {
+      "control_type": "text",
+      "label": "Addressmail line 2",
+      "type": "string",
+      "name": "addressmail_line2"
+    },
+    {
+      "control_type": "text",
+      "label": "Addressmail city",
+      "type": "string",
+      "name": "addressmail_city"
+    },
+    {
+      "control_type": "text",
+      "label": "Addressmail county",
+      "type": "string",
+      "name": "addressmail_county"
+    },
+    {
+      "control_type": "text",
+      "label": "Addressmail state",
+      "type": "string",
+      "name": "addressmail_state"
+    },
+    {
+      "control_type": "text",
+      "label": "Addressmail postalcode",
+      "type": "string",
+      "name": "addressmail_postalcode"
+    },
+    {
+      "control_type": "text",
+      "label": "Addressmail country",
+      "type": "string",
+      "name": "addressmail_country"
+    },
+    {
+      "control_type": "text",
+      "label": "Firstpaidon",
+      "type": "string",
+      "name": "firstpaidon"
+    },
+    {
+      "control_type": "text",
+      "label": "Lastpaidon",
+      "type": "string",
+      "name": "lastpaidon"
+    },
+    {
+      "control_type": "text",
+      "label": "Status",
+      "type": "string",
+      "name": "status"
+    },
+    {
+      "control_type": "number",
+      "label": "Statuscode",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "statuscode"
+    },
+    {
+      "control_type": "text",
+      "label": "Isactive",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Isactive",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "isactive"
+      },
+      "type": "boolean",
+      "name": "isactive"
+    },
+    {
+      "name": "shifts",
+      "type": "array",
+      "of": "string",
+      "label": "Shifts"
+    },
+    {
+      "control_type": "text",
+      "label": "Distancewillingtotravel",
+      "type": "string",
+      "name": "distancewillingtotravel"
+    },
+    {
+      "control_type": "text",
+      "label": "Directhirepaytype",
+      "type": "string",
+      "name": "directhirepaytype"
+    },
+    {
+      "control_type": "text",
+      "label": "Temporarypaytype",
+      "type": "string",
+      "name": "temporarypaytype"
+    },
+    {
+      "control_type": "text",
+      "label": "Temporarytohirepaytype",
+      "type": "string",
+      "name": "temporarytohirepaytype"
+    },
+    {
+      "control_type": "number",
+      "label": "Directhireminpay",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "directhireminpay"
+    },
+    {
+      "control_type": "number",
+      "label": "Temporaryminpay",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "temporaryminpay"
+    },
+    {
+      "control_type": "number",
+      "label": "Temporarytohireminpay",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "temporarytohireminpay"
+    },
+    {
+      "control_type": "text",
+      "label": "Emergencycontactname",
+      "type": "string",
+      "name": "emergencycontactname"
+    },
+    {
+      "control_type": "text",
+      "label": "Emergencycontactphone",
+      "type": "string",
+      "name": "emergencycontactphone"
+    },
+    {
+      "name": "preferreddaystowork",
+      "type": "array",
+      "of": "string",
+      "label": "Preferreddaystowork"
+    },
+    {
+      "control_type": "text",
+      "label": "Finalizedon",
+      "render_input": "date_time_conversion",
+      "parse_output": "date_time_conversion",
+      "type": "date_time",
+      "name": "finalizedon"
+    },
+    {
+      "name": "workexperience",
+      "type": "array",
+      "of": "object",
+      "label": "Workexperience",
+      "properties": [
+        {
+          "control_type": "text",
+          "label": "Companyname",
+          "type": "string",
+          "name": "companyname"
+        },
+        {
+          "control_type": "text",
+          "label": "Title",
+          "type": "string",
+          "name": "title"
+        },
+        {
+          "control_type": "text",
+          "label": "Startdate",
+          "render_input": "date_time_conversion",
+          "parse_output": "date_time_conversion",
+          "type": "date_time",
+          "name": "startdate"
+        },
+        {
+          "control_type": "text",
+          "label": "Enddate",
+          "render_input": "date_time_conversion",
+          "parse_output": "date_time_conversion",
+          "type": "date_time",
+          "name": "enddate"
+        },
+        {
+          "control_type": "text",
+          "label": "Jobdescription",
+          "type": "string",
+          "name": "jobdescription"
+        }
+      ]
+    }
+  ]
+}

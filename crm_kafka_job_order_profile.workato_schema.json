@@ -1,0 +1,312 @@
+{
+  "name": "CRM -> Kafka (Job Order Profile)",
+  "schema": [
+    {
+      "control_type": "text",
+      "label": "Job order ID",
+      "type": "string",
+      "name": "jobOrderId"
+    },
+    {
+      "control_type": "text",
+      "label": "Job order description",
+      "type": "string",
+      "name": "jobOrderDescription"
+    },
+    {
+      "control_type": "text",
+      "label": "Job order long description",
+      "name": "jobOrderLongDescription",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "control_type": "text",
+      "label": "Job order number",
+      "type": "string",
+      "name": "jobOrderNumber"
+    },
+    {
+      "control_type": "number",
+      "label": "Brand ID",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "brandId"
+    },
+    {
+      "control_type": "text",
+      "label": "Brand name",
+      "type": "string",
+      "name": "brandName"
+    },
+    {
+      "control_type": "text",
+      "label": "Branch ID",
+      "type": "string",
+      "name": "branchId"
+    },
+    {
+      "control_type": "text",
+      "label": "Branch name",
+      "type": "string",
+      "name": "branchName"
+    },
+    {
+      "control_type": "text",
+      "label": "Job order title",
+      "type": "string",
+      "name": "jobOrderTitle"
+    },
+    {
+      "control_type": "text",
+      "label": "Start date",
+      "render_input": "date_time_conversion",
+      "parse_output": "date_time_conversion",
+      "type": "date_time",
+      "name": "startDate"
+    },
+    {
+      "control_type": "text",
+      "label": "End date",
+      "render_input": "date_time_conversion",
+      "parse_output": "date_time_conversion",
+      "type": "date_time",
+      "name": "endDate"
+    },
+    {
+      "control_type": "text",
+      "label": "Work monday",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Work monday",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "workMonday"
+      },
+      "type": "boolean",
+      "name": "workMonday"
+    },
+    {
+      "control_type": "text",
+      "label": "Work tuesday",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Work tuesday",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "workTuesday"
+      },
+      "type": "boolean",
+      "name": "workTuesday"
+    },
+    {
+      "control_type": "text",
+      "label": "Work wednesday",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Work wednesday",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "workWednesday"
+      },
+      "type": "boolean",
+      "name": "workWednesday"
+    },
+    {
+      "control_type": "text",
+      "label": "Work thursday",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Work thursday",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "workThursday"
+      },
+      "type": "boolean",
+      "name": "workThursday"
+    },
+    {
+      "control_type": "text",
+      "label": "Work friday",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Work friday",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "workFriday"
+      },
+      "type": "boolean",
+      "name": "workFriday"
+    },
+    {
+      "control_type": "text",
+      "label": "Work saturday",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Work saturday",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "workSaturday"
+      },
+      "type": "boolean",
+      "name": "workSaturday"
+    },
+    {
+      "control_type": "text",
+      "label": "Work sunday",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Work sunday",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "workSunday"
+      },
+      "type": "boolean",
+      "name": "workSunday"
+    },
+    {
+      "control_type": "text",
+      "label": "Shift ID",
+      "type": "string",
+      "name": "shiftId"
+    },
+    {
+      "control_type": "text",
+      "label": "Shift start hour",
+      "type": "string",
+      "name": "shiftStartHour"
+    },
+    {
+      "control_type": "text",
+      "label": "Shift end hour",
+      "type": "string",
+      "name": "shiftEndHour"
+    },
+    {
+      "control_type": "text",
+      "label": "Shift name",
+      "type": "string",
+      "name": "shiftName"
+    },
+    {
+      "control_type": "text",
+      "label": "Shift code",
+      "type": "string",
+      "name": "shiftCode"
+    },
+    {
+      "control_type": "text",
+      "label": "Brand level",
+      "type": "string",
+      "name": "brandLevel"
+    },
+    {
+      "control_type": "number",
+      "label": "Is active",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "isActive"
+    },
+    {
+      "control_type": "text",
+      "label": "Status",
+      "type": "string",
+      "name": "status"
+    },
+    {
+      "control_type": "number",
+      "label": "Statuscode",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "statuscode"
+    },
+    {
+      "name": "essentialFunctions",
+      "type": "array",
+      "of": "object",
+      "label": "Essential functions",
+      "properties": [
+        {
+          "control_type": "text",
+          "label": "Essential function ID",
+          "type": "string",
+          "name": "essentialFunctionId"
+        },
+        {
+          "control_type": "text",
+          "label": "Short name",
+          "type": "string",
+          "name": "shortName"
+        },
+        {
+          "control_type": "text",
+          "label": "Long name",
+          "type": "string",
+          "name": "longName"
+        },
+        {
+          "control_type": "text",
+          "label": "Function code",
+          "type": "string",
+          "name": "functionCode"
+        }
+      ]
+    },
+    {
+      "control_type": "text",
+      "label": "Location number",
+      "name": "locationNumber",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "control_type": "text",
+      "label": "Orientation notes",
+      "name": "orientationNotes",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "control_type": "text",
+      "label": "Direct send orientation",
+      "name": "directSendOrientation",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}

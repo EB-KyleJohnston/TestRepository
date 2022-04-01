@@ -1,0 +1,235 @@
+{
+  "name": "CRM -> Kafka (Job Posting Profile)",
+  "schema": [
+    {
+      "control_type": "text",
+      "label": "Job posting ID",
+      "type": "string",
+      "name": "jobPostingId"
+    },
+    {
+      "control_type": "text",
+      "label": "Job posting number",
+      "type": "string",
+      "name": "jobPostingNumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Job order ID",
+      "type": "string",
+      "name": "jobOrderId"
+    },
+    {
+      "control_type": "number",
+      "label": "Brand ID",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "brandId"
+    },
+    {
+      "control_type": "text",
+      "label": "Brand name",
+      "type": "string",
+      "name": "brandName"
+    },
+    {
+      "control_type": "text",
+      "label": "Branch ID",
+      "type": "string",
+      "name": "branchId"
+    },
+    {
+      "control_type": "text",
+      "label": "Branch name",
+      "type": "string",
+      "name": "branchName"
+    },
+    {
+      "control_type": "text",
+      "label": "Job title",
+      "type": "string",
+      "name": "jobTitle"
+    },
+    {
+      "control_type": "text",
+      "label": "Address",
+      "type": "string",
+      "name": "address"
+    },
+    {
+      "control_type": "text",
+      "label": "City",
+      "type": "string",
+      "name": "city"
+    },
+    {
+      "control_type": "text",
+      "label": "State",
+      "type": "string",
+      "name": "state"
+    },
+    {
+      "control_type": "text",
+      "label": "Zipcode",
+      "type": "string",
+      "name": "zipcode"
+    },
+    {
+      "control_type": "number",
+      "label": "Latitude",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "latitude"
+    },
+    {
+      "control_type": "number",
+      "label": "Longitude",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "longitude"
+    },
+    {
+      "control_type": "text",
+      "label": "Display in feed",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Display in feed",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "displayInFeed"
+      },
+      "type": "boolean",
+      "name": "displayInFeed"
+    },
+    {
+      "control_type": "text",
+      "label": "Hiring org name",
+      "type": "string",
+      "name": "hiringOrgName"
+    },
+    {
+      "control_type": "text",
+      "label": "Publish hiring org name",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Publish hiring org name",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "publishHiringOrgName"
+      },
+      "type": "boolean",
+      "name": "publishHiringOrgName"
+    },
+    {
+      "control_type": "text",
+      "label": "Industry",
+      "type": "string",
+      "name": "industry"
+    },
+    {
+      "control_type": "text",
+      "label": "Pay description",
+      "type": "string",
+      "name": "payDescription"
+    },
+    {
+      "control_type": "text",
+      "label": "Pay per",
+      "type": "string",
+      "name": "payPer"
+    },
+    {
+      "control_type": "text",
+      "label": "Pay type",
+      "type": "string",
+      "name": "payType"
+    },
+    {
+      "control_type": "number",
+      "label": "Pay value",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "payValue"
+    },
+    {
+      "control_type": "number",
+      "label": "Pay min",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "payMin"
+    },
+    {
+      "control_type": "number",
+      "label": "Pay max",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "payMax"
+    },
+    {
+      "control_type": "text",
+      "label": "Job requirements",
+      "type": "string",
+      "name": "jobRequirements"
+    },
+    {
+      "control_type": "text",
+      "label": "Required experience",
+      "type": "string",
+      "name": "requiredExperience"
+    },
+    {
+      "control_type": "text",
+      "label": "Required education",
+      "type": "string",
+      "name": "requiredEducation"
+    },
+    {
+      "control_type": "text",
+      "label": "Is active",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Is active",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "type": "boolean",
+        "name": "isActive"
+      },
+      "type": "boolean",
+      "name": "isActive"
+    },
+    {
+      "control_type": "text",
+      "label": "Status",
+      "type": "string",
+      "name": "status"
+    },
+    {
+      "control_type": "number",
+      "label": "Statuscode",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "statuscode"
+    },
+    {
+      "control_type": "text",
+      "label": "Job description",
+      "name": "jobDescription",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}

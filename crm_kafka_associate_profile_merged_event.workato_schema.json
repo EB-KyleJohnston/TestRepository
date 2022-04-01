@@ -1,0 +1,35 @@
+{
+  "name": "CRM -> Kafka (Associate Profile Merged Event)",
+  "schema": [
+    {
+      "control_type": "text",
+      "label": "Target employee ID",
+      "type": "string",
+      "name": "targetEmployeeId"
+    },
+    {
+      "control_type": "text",
+      "label": "Target employee number",
+      "type": "string",
+      "name": "targetEmployeeNumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Merged employee ID",
+      "type": "string",
+      "name": "mergedEmployeeId"
+    },
+    {
+      "control_type": "text",
+      "label": "Merged employee number",
+      "type": "string",
+      "name": "mergedEmployeeNumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Merge type",
+      "type": "string",
+      "name": "mergeType"
+    }
+  ]
+}

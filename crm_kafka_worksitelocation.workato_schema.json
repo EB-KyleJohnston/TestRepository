@@ -1,0 +1,85 @@
+{
+  "name": "CRM -> Kafka (WorksiteLocation)",
+  "schema": [
+    {
+      "control_type": "text",
+      "label": "Location number",
+      "type": "string",
+      "name": "locationNumber"
+    },
+    {
+      "control_type": "text",
+      "label": "Address line 1",
+      "type": "string",
+      "name": "addressLine1"
+    },
+    {
+      "control_type": "text",
+      "label": "Address line 2",
+      "type": "string",
+      "name": "addressLine2"
+    },
+    {
+      "control_type": "text",
+      "label": "City",
+      "type": "string",
+      "name": "city"
+    },
+    {
+      "control_type": "text",
+      "label": "State",
+      "type": "string",
+      "name": "state"
+    },
+    {
+      "control_type": "text",
+      "label": "Zip",
+      "type": "string",
+      "name": "zip"
+    },
+    {
+      "control_type": "number",
+      "label": "Latitude",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "latitude"
+    },
+    {
+      "control_type": "number",
+      "label": "Longitude",
+      "parse_output": "float_conversion",
+      "type": "number",
+      "name": "longitude"
+    },
+    {
+      "control_type": "text",
+      "label": "Phone",
+      "type": "string",
+      "name": "phone"
+    },
+    {
+      "control_type": "text",
+      "label": "Location type",
+      "type": "string",
+      "name": "locationType"
+    },
+    {
+      "control_type": "text",
+      "label": "Pay cycle",
+      "type": "string",
+      "name": "payCycle"
+    },
+    {
+      "control_type": "text",
+      "label": "Dress code",
+      "type": "string",
+      "name": "dressCode"
+    },
+    {
+      "control_type": "text",
+      "label": "Required PPE",
+      "type": "string",
+      "name": "requiredPPE"
+    }
+  ]
+}
