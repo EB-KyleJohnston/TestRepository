@@ -24,8 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       #- uses: actions/checkout@v3   every step must define a `uses` or `run` key
-      - name: 'Update Topics in manifest'
-      - uses: 'benday-inc/set-property-value-in-appsettings@main'
+      - name: Update Topics in manifest
+        uses: benday-inc/set-property-value-in-appsettings@main
         with:
           pathtosettingsfile: 'https://github.com/EB-KyleJohnston/TestRepository/blob/main/int101_push_crm_info_to_kafka_v1_1_0_20220324.recipe.json'
           keyname1: 'code'
