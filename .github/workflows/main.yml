@@ -27,7 +27,7 @@ jobs:
       - name: Update Topics in manifest
         uses: benday-inc/set-property-value-in-appsettings@main
         with:
-          pathtosettingsfile: 'https://www.github.com/EB-KyleJohnston/TestRepository/blob/main/int101_push_crm_info_to_kafka_v1_1_0_20220324.recipe.json'
+          pathtosettingsfile: https://www.github.com/EB-KyleJohnston/TestRepository/blob/main/int101_push_crm_info_to_kafka_v1_1_0_20220324.recipe.json
           keyname1: 'topic'
           valuetoset: 'tango.qat.crm.jobPosting'
 
