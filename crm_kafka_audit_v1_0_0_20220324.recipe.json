@@ -1,0 +1,391 @@
+{
+  "name": "CRM->Kafka (Audit) v1.0.0.20220324",
+  "description": "When there is a trigger on a specified schedule, do action",
+  "version": 1,
+  "private": true,
+  "concurrency": 1,
+  "code": {
+    "number": 0,
+    "provider": "workato_recipe_function",
+    "name": "execute",
+    "as": "bcc2a9b7",
+    "title": null,
+    "description": null,
+    "keyword": "trigger",
+    "dynamicPickListSelection": {
+    },
+    "toggleCfg": {
+    },
+    "input": {
+      "parameters_schema_json": "[{\"name\":\"messageType\",\"type\":\"string\",\"optional\":false,\"control_type\":\"text\"}]"
+    },
+    "extended_output_schema": [
+      {
+        "type": "object",
+        "name": "parameters",
+        "label": "Parameters",
+        "properties": [
+          {
+            "control_type": "text",
+            "label": "Message type",
+            "name": "messageType",
+            "type": "string",
+            "optional": false
+          }
+        ]
+      }
+    ],
+    "block": [
+      {
+        "number": 1,
+        "keyword": "try",
+        "dynamicPickListSelection": {
+        },
+        "toggleCfg": {
+        },
+        "input": {
+        },
+        "block": [
+          {
+            "number": 2,
+            "provider": "lookup_table",
+            "name": "get_entry",
+            "as": "8adee787",
+            "title": null,
+            "description": "\n      Lookup\n      <span class=\"provider\">entry</span>\n      from\n      <span class=\"provider\">CRM to Kafka - Audit Info</span>\n      lookup table\n    ",
+            "keyword": "action",
+            "dynamicPickListSelection": {
+              "lookup_table_id": "CRM to Kafka - Audit Info"
+            },
+            "toggleCfg": {
+            },
+            "input": {
+              "lookup_table_id": {
+                "zip_name": "crm_to_kafka_audit_info.lookup_table.json",
+                "name": "CRM to Kafka - Audit Info",
+                "folder": ""
+              },
+              "parameters": {
+                "col1": "#{_('data.workato_recipe_function.bcc2a9b7.parameters.messageType')}",
+                "col2": "=today"
+              }
+            },
+            "extended_output_schema": [
+              {
+                "type": "integer",
+                "name": "id",
+                "control_type": "number",
+                "label": "Entry ID",
+                "parse_output": "integer_conversion"
+              },
+              {
+                "type": "object",
+                "name": "entry",
+                "label": "Entry",
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "Message Type",
+                    "name": "col1",
+                    "type": "string",
+                    "sticky": true
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "Timestamp",
+                    "name": "col2",
+                    "type": "string",
+                    "sticky": true
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "Successful Message Count",
+                    "name": "col3",
+                    "type": "string",
+                    "sticky": true
+                  }
+                ]
+              }
+            ],
+            "extended_input_schema": [
+              {
+                "type": "object",
+                "name": "parameters",
+                "label": "Lookup by",
+                "hint": "Provide one or more entry fields to search the entry",
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "Message Type",
+                    "name": "col1",
+                    "type": "string",
+                    "sticky": true,
+                    "optional": true
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "Timestamp",
+                    "name": "col2",
+                    "type": "string",
+                    "sticky": true,
+                    "optional": true
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "Successful Message Count",
+                    "name": "col3",
+                    "type": "string",
+                    "sticky": true,
+                    "optional": true
+                  }
+                ]
+              }
+            ],
+            "uuid": "5d07e2e1-02cd-469b-b719-6622fedcd9de"
+          },
+          {
+            "number": 3,
+            "provider": "lookup_table",
+            "name": "update_entry",
+            "as": "48fd72d0",
+            "title": null,
+            "description": "\n      Update\n      <span class=\"provider\">entry</span>\n      in\n      <span class=\"provider\">CRM to Kafka - Audit Info</span>\n      lookup table\n    ",
+            "keyword": "action",
+            "dynamicPickListSelection": {
+              "lookup_table_id": "CRM to Kafka - Audit Info"
+            },
+            "toggleCfg": {
+              "ignore_not_found": true
+            },
+            "input": {
+              "ignore_not_found": "false",
+              "lookup_table_id": {
+                "zip_name": "crm_to_kafka_audit_info.lookup_table.json",
+                "name": "CRM to Kafka - Audit Info",
+                "folder": ""
+              },
+              "id": "#{_('data.lookup_table.8adee787.id')}",
+              "parameters": {
+                "col3": "=_('data.lookup_table.8adee787.entry.col3').to_i + 1"
+              }
+            },
+            "extended_output_schema": [
+              {
+                "type": "integer",
+                "name": "id",
+                "control_type": "number",
+                "label": "Entry ID",
+                "parse_output": "integer_conversion"
+              },
+              {
+                "type": "object",
+                "name": "entry",
+                "label": "Entry",
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "Message Type",
+                    "name": "col1",
+                    "type": "string",
+                    "sticky": true
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "Timestamp",
+                    "name": "col2",
+                    "type": "string",
+                    "sticky": true
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "Successful Message Count",
+                    "name": "col3",
+                    "type": "string",
+                    "sticky": true
+                  }
+                ]
+              }
+            ],
+            "extended_input_schema": [
+              {
+                "type": "object",
+                "name": "parameters",
+                "label": "Entry fields",
+                "hint": "Fill the fields you want to update",
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "Message Type",
+                    "name": "col1",
+                    "type": "string",
+                    "sticky": true,
+                    "optional": true
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "Timestamp",
+                    "name": "col2",
+                    "type": "string",
+                    "sticky": true,
+                    "optional": true
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "Successful Message Count",
+                    "name": "col3",
+                    "type": "string",
+                    "sticky": true,
+                    "optional": true
+                  }
+                ]
+              }
+            ],
+            "uuid": "e5be4f8c-9e4d-4871-8be3-ada6dcafbdb1"
+          },
+          {
+            "number": 4,
+            "as": "255ab3d3",
+            "keyword": "catch",
+            "dynamicPickListSelection": {
+            },
+            "toggleCfg": {
+            },
+            "input": {
+              "max_retry_count": "0",
+              "retry_interval": "2"
+            },
+            "block": [
+              {
+                "number": 5,
+                "provider": "lookup_table",
+                "name": "add_entry",
+                "as": "3fb3d3ad",
+                "title": null,
+                "description": "\n      Add\n      <span class=\"provider\">entry</span>\n      to\n      <span class=\"provider\">CRM to Kafka - Audit Info</span>\n      lookup table\n    ",
+                "keyword": "action",
+                "dynamicPickListSelection": {
+                  "lookup_table_id": "CRM to Kafka - Audit Info"
+                },
+                "toggleCfg": {
+                },
+                "input": {
+                  "lookup_table_id": {
+                    "zip_name": "crm_to_kafka_audit_info.lookup_table.json",
+                    "name": "CRM to Kafka - Audit Info",
+                    "folder": ""
+                  },
+                  "parameters": {
+                    "col1": "#{_('data.workato_recipe_function.bcc2a9b7.parameters.messageType')}",
+                    "col2": "=today",
+                    "col3": "1"
+                  }
+                },
+                "extended_output_schema": [
+                  {
+                    "type": "integer",
+                    "name": "id",
+                    "control_type": "number",
+                    "label": "Entry ID",
+                    "parse_output": "integer_conversion"
+                  },
+                  {
+                    "type": "object",
+                    "name": "entry",
+                    "label": "Entry",
+                    "properties": [
+                      {
+                        "control_type": "text",
+                        "label": "Message Type",
+                        "name": "col1",
+                        "type": "string",
+                        "sticky": true
+                      },
+                      {
+                        "control_type": "text",
+                        "label": "Timestamp",
+                        "name": "col2",
+                        "type": "string",
+                        "sticky": true
+                      },
+                      {
+                        "control_type": "text",
+                        "label": "Successful Message Count",
+                        "name": "col3",
+                        "type": "string",
+                        "sticky": true
+                      }
+                    ]
+                  }
+                ],
+                "extended_input_schema": [
+                  {
+                    "type": "object",
+                    "name": "parameters",
+                    "label": "Entry fields",
+                    "hint": "Fill the fields for the new entry",
+                    "properties": [
+                      {
+                        "control_type": "text",
+                        "label": "Message Type",
+                        "name": "col1",
+                        "type": "string",
+                        "sticky": true,
+                        "optional": true
+                      },
+                      {
+                        "control_type": "text",
+                        "label": "Timestamp",
+                        "name": "col2",
+                        "type": "string",
+                        "sticky": true,
+                        "optional": true
+                      },
+                      {
+                        "control_type": "text",
+                        "label": "Successful Message Count",
+                        "name": "col3",
+                        "type": "string",
+                        "sticky": true,
+                        "optional": true
+                      }
+                    ]
+                  }
+                ],
+                "uuid": "712967a2-9fa6-429f-8e17-809f5f97a1bf"
+              },
+              {
+                "number": 6,
+                "keyword": "stop",
+                "dynamicPickListSelection": {
+                },
+                "toggleCfg": {
+                },
+                "input": {
+                  "stop_with_error": "false"
+                },
+                "uuid": "bda7386e-6114-4ff7-9a5c-d250773399bf"
+              }
+            ],
+            "uuid": "7126b2a3-b5ef-4e43-8090-253d52af3f36"
+          }
+        ],
+        "uuid": "f340f3e8-8b68-4b83-b743-1b87703bd7ab"
+      }
+    ],
+    "uuid": "040d33fc-24e5-4988-9f21-276562b2459d"
+  },
+  "config": [
+    {
+      "keyword": "application",
+      "provider": "lookup_table",
+      "skip_validation": false,
+      "account_id": null
+    },
+    {
+      "keyword": "application",
+      "provider": "workato_recipe_function",
+      "skip_validation": false,
+      "account_id": null
+    }
+  ]
+}
